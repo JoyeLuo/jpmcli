@@ -173,7 +173,12 @@ public class Windows extends Platform {
 				);
 			}
 		}
-		logger.debug("Ini content {}", IO.collect(ini));
+
+		try {
+			logger.debug("Ini content {}", IO.collect(ini));
+		} catch (Exception e) {
+		}
+
 		return null;
 	}
 
